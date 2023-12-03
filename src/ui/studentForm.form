@@ -26,11 +26,10 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="fieldofStudyLabel" alignment="0" min="-2" pref="113" max="-2" attributes="0"/>
                           <Component id="misRadioButton" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="mbtRadio" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="fieldofStudyLabel" alignment="0" min="-2" pref="113" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="331" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
@@ -85,13 +84,12 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="appointForChooser" min="-2" pref="173" max="-2" attributes="0"/>
                   </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="datePicker" min="-2" pref="161" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="datePicker" min="-2" pref="137" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="102" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -143,7 +141,7 @@
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="pickDateLabel" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
               <Component id="datePicker" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="describeLabek" min="-2" max="-2" attributes="0"/>

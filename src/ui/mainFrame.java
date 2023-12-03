@@ -114,6 +114,10 @@ public class mainFrame extends javax.swing.JFrame {
 
     private void deanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deanButtonActionPerformed
         // TODO add your handling code here:
+        deanForm newDeanForm = new deanForm(null);
+        bottomPanel.add(newDeanForm);
+        CardLayout layout = (CardLayout) bottomPanel.getLayout();
+        layout.next(bottomPanel);
     }//GEN-LAST:event_deanButtonActionPerformed
 
     /**

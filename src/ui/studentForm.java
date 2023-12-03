@@ -13,7 +13,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
-
+import model.student;
+import util.DatabaseConnector;
 /**
  *
  * @author Kruti
@@ -173,10 +174,9 @@ public class studentForm extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(fieldofStudyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(misRadioButton)
-                            .addComponent(mbtRadio))
-                        .addGap(0, 331, Short.MAX_VALUE))
+                            .addComponent(mbtRadio)
+                            .addComponent(fieldofStudyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -217,12 +217,11 @@ public class studentForm extends javax.swing.JPanel {
                         .addComponent(imageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(appointForChooser, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(datePicker, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(appointForChooser, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(datePicker, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -266,7 +265,7 @@ public class studentForm extends javax.swing.JPanel {
                     .addComponent(cyberRadio))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(pickDateLabel)
-                .addGap(4, 4, 4)
+                .addGap(8, 8, 8)
                 .addComponent(datePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(describeLabek)
@@ -388,9 +387,66 @@ private boolean validateFields() {
     return true; // All validations passed
 }
     private void sendButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendButtonActionPerformed
-    
+        // TODO add your handling code here:
+        if (validateFields()){
+            student newStudent = new student();
+            try{
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                newStudent.setfName(firstNameTextField.getText());
+                newStudent.setlName(lastNameTextField.getText());
+                newStudent.setStuId(studentIDTextField.getText());
+                newStudent.setEmail(emailTextField.getText());
+                newStudent.setPhone(phoneTextField.getText());
+                newStudent.setAppointmentReason(appointForChooser.getSelectedItem().toString());
+                newStudent.setFieldOfStudy(fieldOfStudyButtonGroup.getSelection().getActionCommand());
+                Date selectedDate = datePicker.getDate();
+                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                // Format the selected date to a string
+                String formattedDate = dateFormat.format(selectedDate);
+                try {
+                // Parse the formatted date string back to a Date object
+                Date parsedDate = dateFormat.parse(formattedDate);
+                // Set the parsed Date object to newStudent
+                newStudent.setDate(parsedDate);
+                } catch (ParseException ex) {
+                ex.printStackTrace(); // Handle parsing exception here
+                }
+                String message = "Appointment confirmed";
+            JOptionPane.showMessageDialog(this, message, "Appointment Confirmation", JOptionPane.INFORMATION_MESSAGE);
+                //insert into db
+                DatabaseConnector.addStudent(newStudent);
+
+            } catch (Exception e){
+            
+            }
     }//GEN-LAST:event_sendButtonActionPerformed
-    
+    }
     String selectedImagePath;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton analyticsRadio;
