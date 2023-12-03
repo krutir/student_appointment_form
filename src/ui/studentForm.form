@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="fieldOfStudyButtonGroup">
+    </Component>
+  </NonVisualComponents>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="titleLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="fieldofStudyLabel" alignment="0" min="-2" pref="113" max="-2" attributes="0"/>
+                          <Component id="misRadioButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="mbtRadio" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="331" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="yourNameLabel" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                              <Component id="describeLabek" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                              <Component id="appointmentReasonLabel" alignment="0" min="-2" pref="223" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="studentIDTextField" alignment="0" pref="164" max="32767" attributes="0"/>
+                                          <Component id="emailTextField" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="firstNameTextField" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Component id="studentIdLabel" alignment="0" min="-2" pref="84" max="-2" attributes="0"/>
+                                      <Component id="emailLabel" alignment="0" min="-2" pref="73" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="phoneLabel" alignment="0" min="-2" pref="68" max="-2" attributes="0"/>
+                                      <Component id="lastNameTextField" alignment="0" pref="187" max="32767" attributes="0"/>
+                                      <Component id="phoneTextField" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="219" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="analyticsRadio" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
+                                      <Component id="cyberRadio" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="mraRadioButton" alignment="0" min="-2" pref="161" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Component id="describeTextField" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="uploadIdLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="mpmRadioButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="pickDateLabel" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="199" max="-2" attributes="0"/>
+                      <Component id="sendButton" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="uploadImageButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                      <Component id="imageLabel" min="-2" pref="95" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="appointForChooser" min="-2" pref="173" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="datePicker" min="-2" pref="137" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="titleLabel" min="-2" pref="39" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="yourNameLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="firstNameTextField" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                  <Component id="lastNameTextField" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <Component id="studentIdLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="studentIDTextField" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="emailLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="phoneLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="emailTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="phoneTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="appointmentReasonLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="appointForChooser" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+              <Component id="fieldofStudyLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="misRadioButton" min="-2" max="-2" attributes="0"/>
+                  <Component id="analyticsRadio" min="-2" pref="21" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="mpmRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="mraRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="mbtRadio" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cyberRadio" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="pickDateLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+              <Component id="datePicker" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="describeLabek" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="describeTextField" min="-2" pref="57" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="uploadIdLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="uploadImageButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="imageLabel" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="sendButton" min="-2" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="titleLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Calibri" size="24" style="0"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Student Appointment Form"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="yourNameLabel">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Your Name *"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="firstNameTextField">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="firstNameTextFieldActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="lastNameTextField">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lastNameTextFieldActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="studentIdLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Student ID# *"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="studentIDTextField">
+    </Component>
+    <Component class="javax.swing.JLabel" name="emailLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Your Email *"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="phoneLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Phone # *"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="emailTextField">
+    </Component>
+    <Component class="javax.swing.JTextField" name="phoneTextField">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="phoneTextFieldActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="appointmentReasonLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="What are you making appointment for?"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="fieldofStudyLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Field of Study *"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="misRadioButton">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="fieldOfStudyButtonGroup"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Msc. Information Systems"/>
+        <Property name="actionCommand" type="java.lang.String" value="Information Systems"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="misRadioButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="mpmRadioButton">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="fieldOfStudyButtonGroup"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="MSc. Project Management"/>
+        <Property name="actionCommand" type="java.lang.String" value="PROJECT MANAGEMENT"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="mbtRadio">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="fieldOfStudyButtonGroup"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="MSc. Biotechnology"/>
+        <Property name="actionCommand" type="java.lang.String" value="BIOTECHNOLOGY"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="analyticsRadio">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="fieldOfStudyButtonGroup"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="MSc. Analytics"/>
+        <Property name="actionCommand" type="java.lang.String" value="ANALYTICS"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="analyticsRadioActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="mraRadioButton">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="fieldOfStudyButtonGroup"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="MSc. Regulatory Affairs"/>
+        <Property name="actionCommand" type="java.lang.String" value="REGULATORY AFFAIRS"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="cyberRadio">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="fieldOfStudyButtonGroup"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="MSc. Cyber-Physical Systems"/>
+        <Property name="actionCommand" type="java.lang.String" value="CYBER-PHYSICAL SYSTEMS"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="pickDateLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Pick a Date"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="describeLabek">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Describe about the reason for appointment"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="describeTextField">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="describeTextFieldActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="uploadIdLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Upload Student ID * "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="uploadImageButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Browse"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="uploadImageButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="imageLabel">
+    </Component>
+    <Component class="javax.swing.JButton" name="sendButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Send"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sendButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="appointForChooser">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value="Advising"/>
+            <StringItem index="1" value="Exam related queries"/>
+            <StringItem index="2" value="Course related concerns"/>
+            <StringItem index="3" value="others"/>
+          </StringArray>
+        </Property>
+        <Property name="selectedIndex" type="int" value="-1"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="com.toedter.calendar.JDateChooser" name="datePicker">
+    </Component>
+  </SubComponents>
+</Form>
