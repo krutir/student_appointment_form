@@ -3,18 +3,35 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package adminForm;
+import java.awt.Graphics;
+import java.awt.event.KeyEvent;
+import java.awt.print.PageFormat;
+import java.awt.print.Printable;
+import java.awt.print.PrinterException;
+import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import javax.swing.JOptionPane;
+import javax.swing.RowFilter;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
+import model.student;
+import util.DatabaseConnector;
 
 /**
  *
  * @author Admin
  */
-public class adminRightsForm extends javax.swing.JPanel {
+public class adminRightsForm extends javax.swing.JPanel implements Printable {
 
     /**
      * Creates new form adminRightsForm
      */
-    public adminRightsForm() {
+    private ArrayList<student> appointment;
+    public adminRightsForm(student newStudent) {
         initComponents();
+        populateTable();
+        
     }
 
     /**
@@ -26,10 +43,169 @@ public class adminRightsForm extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setLayout(new java.awt.CardLayout());
+        jScrollPane1 = new javax.swing.JScrollPane();
+        adminDatabaseTable = new javax.swing.JTable();
+        editEntries = new javax.swing.JLabel();
+        Delete = new javax.swing.JButton();
+        searchLabel = new javax.swing.JLabel();
+        searchTextBox = new javax.swing.JTextField();
+        exportButton = new javax.swing.JButton();
+        searchButton = new javax.swing.JButton();
+
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+
+        adminDatabaseTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "fName", "lName", "stuID", "email", "phone", "appointmentReason", "fieldOfStudy", "date"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, true, true, true, true, true, true
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(adminDatabaseTable);
+
+        editEntries.setText("Edit Entries:");
+
+        Delete.setText("Delete");
+        Delete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DeleteActionPerformed(evt);
+            }
+        });
+
+        searchLabel.setText("Search entry:");
+
+        searchTextBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchTextBoxActionPerformed(evt);
+            }
+        });
+
+        exportButton.setText("Export");
+
+        searchButton.setText("Search");
+        searchButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(editEntries, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(Delete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(exportButton, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(searchLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(searchTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(searchButton)))
+                .addContainerGap(101, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(148, 148, 148)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(searchLabel)
+                    .addComponent(searchTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(searchButton))
+                .addGap(23, 23, 23)
+                .addComponent(editEntries)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(54, 54, 54)
+                        .addComponent(Delete)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(exportButton)))
+                .addGap(64, 64, 64))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DeleteActionPerformed
 
+    private void searchTextBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchTextBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_searchTextBoxActionPerformed
+
+    private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel model = (DefaultTableModel) adminDatabaseTable.getModel();
+        TableRowSorter<DefaultTableModel> obj= new TableRowSorter<>(model);
+        adminDatabaseTable.setRowSorter(obj);
+        obj.setRowFilter(RowFilter.regexFilter(searchTextBox.getText()));
+        
+    }//GEN-LAST:event_searchButtonActionPerformed
+
+  public void populateTable(){
+      try{
+          this.appointment = DatabaseConnector.getAllAppointments();
+          DefaultTableModel model = (DefaultTableModel) adminDatabaseTable.getModel();
+          model.setRowCount(0);
+          for (student s : appointment) {
+              Object[] row = new Object[8];
+              row[0] = s.getfName();
+              row[1] = s.getlName();
+              row[2] = s.getStuId();
+              row[3] = s.getEmail();
+              row[4] = s.getPhone();
+              row[5] = s.getAppointmentReason();
+              row[6] = s.getFieldOfStudy(); 
+              row[7] = s.getDate();
+              model.addRow(row);
+          }
+          
+      }
+      catch(Exception e){
+          JOptionPane.showMessageDialog(this, e.getMessage());
+      }
+  } 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Delete;
+    private javax.swing.JTable adminDatabaseTable;
+    private javax.swing.JLabel editEntries;
+    private javax.swing.JButton exportButton;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton searchButton;
+    private javax.swing.JLabel searchLabel;
+    private javax.swing.JTextField searchTextBox;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public int print(Graphics graphics, PageFormat pageFormat, int pageIndex) throws PrinterException {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
