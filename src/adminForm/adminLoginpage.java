@@ -125,7 +125,7 @@ public adminLoginpage() {
 
             if (adminPassword.equals(passwordTextField.getText().trim())) {
                 // Password is correct
-                System.out.println("Admin Logged In");
+                
                 
             } else {
                 // Incorrect password
