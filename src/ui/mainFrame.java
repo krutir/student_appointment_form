@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package ui;
+import adminForm.adminLoginpage;
 import java.awt.CardLayout;
 
 /**
@@ -32,6 +33,7 @@ public class mainFrame extends javax.swing.JFrame {
         titleLabel = new javax.swing.JLabel();
         studentButton = new javax.swing.JButton();
         deanButton = new javax.swing.JButton();
+        adminButton = new javax.swing.JButton();
         bottomPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -56,6 +58,13 @@ public class mainFrame extends javax.swing.JFrame {
             }
         });
 
+        adminButton.setText("Admin");
+        adminButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adminButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout topPanelLayout = new javax.swing.GroupLayout(topPanel);
         topPanel.setLayout(topPanelLayout);
         topPanelLayout.setHorizontalGroup(
@@ -65,10 +74,12 @@ public class mainFrame extends javax.swing.JFrame {
                 .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(128, 128, 128))
             .addGroup(topPanelLayout.createSequentialGroup()
-                .addGap(88, 88, 88)
+                .addGap(31, 31, 31)
                 .addComponent(studentButton)
-                .addGap(124, 124, 124)
+                .addGap(96, 96, 96)
                 .addComponent(deanButton)
+                .addGap(80, 80, 80)
+                .addComponent(adminButton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         topPanelLayout.setVerticalGroup(
@@ -79,7 +90,8 @@ public class mainFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addGroup(topPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(studentButton)
-                    .addComponent(deanButton))
+                    .addComponent(deanButton)
+                    .addComponent(adminButton))
                 .addGap(19, 19, 19))
         );
 
@@ -119,6 +131,14 @@ public class mainFrame extends javax.swing.JFrame {
         CardLayout layout = (CardLayout) bottomPanel.getLayout();
         layout.next(bottomPanel);
     }//GEN-LAST:event_deanButtonActionPerformed
+
+    private void adminButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminButtonActionPerformed
+        // TODO add your handling code here:
+        adminLoginpage newadmin = new adminLoginpage();
+        bottomPanel.add(newadmin);
+        CardLayout layout = (CardLayout) bottomPanel.getLayout();
+        layout.next(bottomPanel);
+    }//GEN-LAST:event_adminButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -161,6 +181,7 @@ public class mainFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JSplitPane SplitPane;
+    private javax.swing.JButton adminButton;
     private javax.swing.JPanel bottomPanel;
     private javax.swing.JButton deanButton;
     private javax.swing.JButton studentButton;
